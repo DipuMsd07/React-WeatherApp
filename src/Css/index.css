@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Poppins:wght@300&display=swap");
+@-webkit-keyframes drift {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes drift {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fas-slide {
+  from {
+    -webkit-transform: translateX(-0.5rem);
+            transform: translateX(-0.5rem);
+  }
+  to {
+    -webkit-transform: translateX(0.5rem);
+            transform: translateX(0.5rem);
+  }
+}
+
+@keyframes fas-slide {
+  from {
+    -webkit-transform: translateX(-0.5rem);
+            transform: translateX(-0.5rem);
+  }
+  to {
+    -webkit-transform: translateX(0.5rem);
+            transform: translateX(0.5rem);
+  }
+}
+
+@-webkit-keyframes fas-anime {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes fas-anime {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f3f2ef;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .box {
+  width: 25vw;
+  height: 60vh;
+  border-radius: 1em;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+  position: relative;
+  background: #a5bbdd;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  min-width: 20rem;
+  min-height: 35rem;
+}
+
+body .box .box::after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+body .box .inputData {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+body .box .inputData .inputField {
+  padding: .5em;
+  border-radius: 20px;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
+body .box .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 9em 0;
+}
+
+body .box .info .location {
+  text-transform: capitalize;
+  font-family: 'Jost', sans-serif;
+  font-size: 3em;
+}
+
+body .box .info .location .fas {
+  -webkit-animation: fas-slide 3s linear infinite alternate;
+          animation: fas-slide 3s linear infinite alternate;
+  color: #fff;
+}
+
+body .box .info .location .fa-street-view {
+  margin-right: .3em;
+}
+
+body .box .info .temp {
+  font-family: 'Jost', sans-serif;
+  margin-top: 2em;
+  z-index: 100;
+}
+
+body .box .info .min_max {
+  font-family: 'Jost', sans-serif;
+  color: #474545;
+  z-index: 100;
+}
+
+body .box .wave {
+  opacity: .3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background: #fff;
+  -webkit-transform-origin: 50% 48%;
+          transform-origin: 50% 48%;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  border-radius: 43%;
+  -webkit-animation: drift 3000ms infinite linear;
+          animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+
+body .box .wave.three {
+  -webkit-animation: drift 5000ms infinite linear;
+          animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: .2;
+}
+
+body .box .wave.two {
+  -webkit-animation: drift 7000ms infinite linear;
+          animation: drift 7000ms infinite linear;
+  opacity: .1;
+  z-index: 3 !important;
+}
+
+.error {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2em;
+  padding-top: 3em;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  body .box {
+    min-width: 18rem;
+    min-height: 25rem;
+  }
+  body .box .info {
+    margin: 4em 0;
+  }
+  body .box .info .temp {
+    margin-top: 1.5em;
+  }
+  body .box .wave {
+    top: 145%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,26 @@
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }  
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fas-slide {
+    from {
+        transform: translateX(-0.5rem);
+    }
+    to {    
+        transform: translateX(0.5rem);
+    }
+}
+
+@keyframes fas-anime {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1.5)
+    }
+}
