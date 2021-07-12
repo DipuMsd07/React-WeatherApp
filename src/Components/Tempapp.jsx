@@ -5,13 +5,12 @@ import InputField from './InputField';
 
 const Tempapp = () =>{
 
-    // api.openweathermap.org/data/2.5/weather?q={city name}&appid={bbede7450e05ef105e7130a0f302fa57}
     const [city,setCity] = useState(null);
     const [search,setSearch] = useState("pune");
 
     useEffect(()=>{
         const fetchApi = async () =>{
-            const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=bbede7450e05ef105e7130a0f302fa57`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=bbede7450e05ef105e7130a0f302fa57`
             const response = await fetch(url);
             const resJson = await response.json();
             // console.log(resJson);
