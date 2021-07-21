@@ -127,6 +127,11 @@ body{
     body .box{
         min-width: 18rem;
         min-height: 25rem;
+        .inputData{
+            .inputField{
+                font-size: 0.75em;
+            }
+        }
         .info{
             margin: 4em 0;
 

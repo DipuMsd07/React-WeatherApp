@@ -158,6 +158,9 @@ body .box .wave.two {
     min-width: 18rem;
     min-height: 25rem;
   }
+  body .box .inputData .inputField {
+    font-size: 0.75em;
+  }
   body .box .info {
     margin: 4em 0;
   }
