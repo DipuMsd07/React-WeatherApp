@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins:wght@300&display=swap');
 
 @import "./animations";
-@import "./mediaquery";
 
 *{
     margin: 0;
@@ -128,7 +127,12 @@ body{
     body .box{
         min-width: 18rem;
         min-height: 25rem;
-
+        .inputData{
+            width: 50%;
+            .inputField{
+                font-size: 2em;
+            }
+        }
         .info{
             margin: 4em 0;
 
@@ -137,7 +141,7 @@ body{
             }
         }
         .wave{
-            top: 145%;
+            top: 120%;
         }
     }
 }
